@@ -25,6 +25,7 @@ def process_text(text):
                   'than', 'too', 'very', 's', 't', 'can', 'will', 'just', 'don', 'should', 'now'}
     text = text.translate(str.maketrans("", "", string.punctuation)).replace("“", "").replace("”", "").replace("‘", "").replace("’", "")
     text = ''.join((c for c in unicodedata.normalize('NFD', text) if unicodedata.category(c) != 'Mn'))
+    text = re.sub(r"\d+", "", text) # remove numbers
     text = " ".join([word for word in text.split() if word.lower() not in stop_words])
 
     # Convert all letters to uppercase
