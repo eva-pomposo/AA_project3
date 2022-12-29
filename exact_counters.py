@@ -23,6 +23,7 @@ with open(args.input, "r", encoding="utf-8") as f:
 
 # Count the occurrences of each letter
 letter_counts = count_letters(text)
+#letter_counts = dict(sorted(letter_counts.items(), key=lambda item: item[1], reverse=True))
 
 # Print the letter counts
 for letter, count in letter_counts.items():
