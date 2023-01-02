@@ -18,18 +18,26 @@ def lossy_count(text, k):
     # Sort the letters by their estimated count in descending order
     return dict(sorted(letter_counts.items(), key=lambda item: item[1], reverse=True))
 
+def lossy_count(file, k):
+    # Read the preprocessed text file
+    with open(file, "r", encoding="utf-8") as f:
+        text = f.read()
+
+    # Estimate the k most frequent letters, running Lossy-Count algorithm
+    return lossy_count(text, k)
+
 # Parse the command line arguments
-parser = argparse.ArgumentParser()
-parser.add_argument("--input", "-i", help="Path to the input text file", required=True)
-args = parser.parse_args()
-
-# Read the preprocessed text file
-with open(args.input, "r", encoding="utf-8") as f:
-    text = f.read()
-
-# Estimate the most frequent letters using the Lossy-Count algorithm with k = 10
-frequent_letters = lossy_count(text, 10)
-
-# Print the estimated counts of the most frequent letters
-for letter, count in frequent_letters.items():
-    print(f"{letter}: {count}")
+#parser = argparse.ArgumentParser()
+#parser.add_argument("--input", "-i", help="Path to the input text file", required=True)
+#args = parser.parse_args()
+#
+## Read the preprocessed text file
+#with open(args.input, "r", encoding="utf-8") as f:
+#    text = f.read()
+#
+## Estimate the k most frequent letters, running Lossy-Count algorithm for k = 3, k = 5 and k = 10.
+#for k in [3, 5, 10]:
+#    print(f"Top {k} letters:")
+#    for letter, count in lossy_count(text, k).items():
+#        print(f"{letter}: {count}")
+#    print()

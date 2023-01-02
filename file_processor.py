@@ -31,19 +31,31 @@ def process_text(text):
     # Convert all letters to uppercase
     return text.upper()
 
+def file_processor(input_file, output_file):
+    # Read the text file
+    with open(input_file, "r", encoding="utf-8") as f:
+        text = f.read()
+
+    # Process the text
+    text = process_text(text)
+
+    # Save the processed text to a output file
+    with open(output_file, "w") as f:
+        f.write(text)
+
 # Parse the command line arguments
-parser = argparse.ArgumentParser()
-parser.add_argument("--input", "-i", help="Path to the input text file", required=True)
-parser.add_argument("--output", "-o", help="Path to the output text file", required=True)
-args = parser.parse_args()
-
-# Read the text file
-with open(args.input, "r", encoding="utf-8") as f:
-    text = f.read()
-
-# Process the text
-text = process_text(text)
-
-# Save the processed text to a output file
-with open(args.output, "w") as f:
-    f.write(text)
+#parser = argparse.ArgumentParser()
+#parser.add_argument("--input", "-i", help="Path to the input text file", required=True)
+#parser.add_argument("--output", "-o", help="Path to the output text file", required=True)
+#args = parser.parse_args()
+#
+## Read the text file
+#with open(args.input, "r", encoding="utf-8") as f:
+#    text = f.read()
+#
+## Process the text
+#text = process_text(text)
+#
+## Save the processed text to a output file
+#with open(args.output, "w") as f:
+#    f.write(text)
