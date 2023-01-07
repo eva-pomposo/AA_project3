@@ -14,13 +14,21 @@ def count_letters(text):
     return dict(sorted(letter_counts.items(), key=lambda item: item[1], reverse=True))
     #return letter_counts
 
-def exact_counters(file):
+def exact_counters(preprocessed_file, result_file):
     # Read the preprocessed text file
-    with open(file, "r", encoding="utf-8") as f:
+    with open(preprocessed_file, "r", encoding="utf-8") as f:
         text = f.read()
 
     # Count the occurrences of each letter
-    return count_letters(text)
+    exact_counts = count_letters(text)
+
+    # Write results to file
+    with open("results/exact_counts_" + result_file, "w") as f:
+        f.write("letter order count\n")
+        for i, (letter, count) in enumerate(exact_counts.items()):
+            f.write(f"{letter} {i+1} {count} \n") 
+
+    return exact_counts
 
 # Parse the command line arguments
 #parser = argparse.ArgumentParser()

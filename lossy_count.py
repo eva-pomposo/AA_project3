@@ -1,7 +1,7 @@
 from collections import defaultdict
 import argparse
 
-def lossy_count(text, k):
+def estimate_frequent_letters(text, k):
     # Create a defaultdict to store the letter counts
     letter_counts = defaultdict(int)
 
@@ -24,7 +24,7 @@ def lossy_count(file, k):
         text = f.read()
 
     # Estimate the k most frequent letters, running Lossy-Count algorithm
-    return lossy_count(text, k)
+    return estimate_frequent_letters(text, k)
 
 # Parse the command line arguments
 #parser = argparse.ArgumentParser()
