@@ -21,10 +21,16 @@ def exact_counters(preprocessed_file, result_file):
     # Count the occurrences of each letter
     exact_counts = count_letters(text)
 
+    # Calculate the total number of bits required to store the exact counts
+    total_bits = 0
     # Write results to file
     with open("results/exact_counts_" + result_file, "w") as f:
         f.write("letter order count\n")
         for i, (letter, count) in enumerate(exact_counts.items()):
             f.write(f"{letter} {i+1} {count} \n") 
+            total_bits += count.bit_length()
+
+    print(f"Total bits required to store exact counts: {total_bits}")
+    print()
 
     return exact_counts

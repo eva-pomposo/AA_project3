@@ -1,7 +1,7 @@
 import random
 import string
 
-M = 1000
+M = 100
 
 def fp_increment(x):
     t = x // M

@@ -5,7 +5,6 @@ from csuros_counter import csuros_counter
 from exact_counters import exact_counters
 from file_processor import file_processor
 from lossy_count import lossy_count
-import psutil
 
 # Parse the command line arguments
 parser = argparse.ArgumentParser()
@@ -16,25 +15,24 @@ parser.add_argument("--stopwords", "-s", help="Path to the stopwords file", requ
 args = parser.parse_args()
 
 # Preprocess the input text file
-text = file_processor(args.input, args.output, args.stopwords)
+#text = file_processor(args.input, args.output, args.stopwords)
 
 # Count the occurrences of each letter using the exact counters and calculate the memory usage
-process = psutil.Process() 
-memory_usage = process.memory_info().rss
 exact_counts = exact_counters(args.output, args.results)
-print(f"Memory usage: {process.memory_info().rss - memory_usage} bytes")
 
 # Initialize lists to store the absolute and relative errors for each test, and a dictionary to store the average counts of each letter
 absolute_errors = []
 relative_errors = []
 avg_frequent_letters_csuros_counter = {letter: 0 for letter in string.ascii_uppercase}
-
+total_bits = []
 # Perform a set of tests and calculate metrics
-num_tests = 1000
+num_tests = 20
 for i in range(num_tests):
     # Estimate the most frequent letters using the approximate floating-point counter with m = 1000
     estimated_counts = csuros_counter(args.output)
 
+    # Calculate the total number of bits required to store the estimated counts
+    num_bits = 0
     # Calculate the absolute errors, relative errors and average counts of each letter 
     for letter, exact_count in exact_counts.items():
         avg_frequent_letters_csuros_counter[letter] += estimated_counts[letter]
@@ -43,6 +41,8 @@ for i in range(num_tests):
         relative_error = absolute_error / exact_count
         absolute_errors.append(absolute_error)
         relative_errors.append(relative_error)
+        num_bits += estimated_count.bit_length()
+    total_bits.append(num_bits)
 
 # Divide the counts by the number of tests to get the average
 for letter in avg_frequent_letters_csuros_counter:
@@ -65,6 +65,7 @@ print(f"Maximum absolute error: {maximum_absolute_error:.2f}")
 print(f"Average relative error: {average_relative_error:.2f}")
 print(f"Minimum relative error: {minimum_relative_error:.2f}")
 print(f"Maximum relative error: {maximum_relative_error:.2f}")
+print(f"Average of total bits required to store estimated counts: {np.mean(total_bits):.2f}")
 print()
 
 # Write the average counts of the Csuros counter to a file
@@ -80,8 +81,11 @@ with open("results/lossy_count_" + args.results, "w") as f:
         # Initialize lists to store the absolute and relative errors for each k
         absolute_errors = []
         relative_errors = []
+        # Calculate the total number of bits required to store the exact counts
+        total_bits = 0
         for i, (letter, count) in enumerate(lossy_count(args.output, k).items()):
             f.write(f"{letter} {k} {i+1} {count} \n")   
+            total_bits += count.bit_length()
             # Calculate the absolute errors, relative errors and average counts of each letter
             exact_count = exact_counts[letter]
             absolute_error = abs(count - exact_count)
@@ -96,4 +100,5 @@ with open("results/lossy_count_" + args.results, "w") as f:
         print(f"Average relative error: {np.mean(relative_errors):.2f}")
         print(f"Minimum relative error: {np.min(relative_errors):.2f}")
         print(f"Maximum relative error: {np.max(relative_errors):.2f}")
+        print(f"Total bits required to store estimated counts: {total_bits}")
         print()

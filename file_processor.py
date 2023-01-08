@@ -14,7 +14,7 @@ def process_text(text, stopwords_file):
         stop_words = f.read().splitlines()
     stop_words = set(stop_words)
 
-    text = text.translate(str.maketrans("", "", string.punctuation)).replace("“", "").replace("”", "").replace("‘", "").replace("’", "").replace("„", "").replace("‚", "").replace("«", "").replace("»", "").replace("æ", "").replace("—", "")
+    text = text.translate(str.maketrans("", "", string.punctuation)).replace("“", "").replace("”", "").replace("‘", "").replace("’", "").replace("„", "").replace("‚", "").replace("«", "").replace("»", "").replace("æ", "").replace("—", "").replace("Æ", "").replace("œ", "")
     text = ''.join((c for c in unicodedata.normalize('NFD', text) if unicodedata.category(c) != 'Mn'))
     text = re.sub(r"\d+", "", text) # remove numbers
     text = " ".join([word for word in text.split() if word.lower() not in stop_words])
