@@ -1,8 +1,7 @@
 import random
 import string
-import argparse
 
-M = 100
+M = 1000
 
 def fp_increment(x):
     t = x // M
@@ -32,20 +31,3 @@ def csuros_counter(file):
 
     # Estimate the most frequent letters using the approximate floating-point counter with m = 100
     return estimate_frequent_letters(text)
-
-# Parse the command line arguments
-#parser = argparse.ArgumentParser()
-#parser.add_argument("--input", "-i", help="Path to the input text file", required=True)
-#args = parser.parse_args()
-#
-## Read the preprocessed text file
-#with open(args.input, "r", encoding="utf-8") as f:
-#    text = f.read()
-#
-## Estimate the most frequent letters using the approximate floating-point counter with m = 100
-#frequent_letters = estimate_frequent_letters(text)
-#
-## Print the estimated counts of the most frequent letters
-#for letter, count in frequent_letters.items():
-#    print(f"{letter}: {count}")
-#

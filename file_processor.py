@@ -1,7 +1,6 @@
 import re
 import string
 import unicodedata
-import argparse
 
 def process_text(text):
     # Remove Project Gutenberg file headers
@@ -42,20 +41,3 @@ def file_processor(input_file, output_file):
     # Save the processed text to a output file
     with open(output_file, "w") as f:
         f.write(text)
-
-# Parse the command line arguments
-#parser = argparse.ArgumentParser()
-#parser.add_argument("--input", "-i", help="Path to the input text file", required=True)
-#parser.add_argument("--output", "-o", help="Path to the output text file", required=True)
-#args = parser.parse_args()
-#
-## Read the text file
-#with open(args.input, "r", encoding="utf-8") as f:
-#    text = f.read()
-#
-## Process the text
-#text = process_text(text)
-#
-## Save the processed text to a output file
-#with open(args.output, "w") as f:
-#    f.write(text)
