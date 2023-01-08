@@ -23,7 +23,7 @@ def process_text(text):
                   'there', 'when', 'where', 'why', 'how', 'all', 'any', 'both', 'each', 'few', 'more',
                   'most', 'other', 'some', 'such', 'no', 'nor', 'not', 'only', 'own', 'same', 'so',
                   'than', 'too', 'very', 's', 't', 'can', 'will', 'just', 'don', 'should', 'now'}
-    text = text.translate(str.maketrans("", "", string.punctuation)).replace("“", "").replace("”", "").replace("‘", "").replace("’", "")
+    text = text.translate(str.maketrans("", "", string.punctuation)).replace("“", "").replace("”", "").replace("‘", "").replace("’", "").replace("„", "").replace("‚", "").replace("«", "").replace("»", "").replace("æ", "").replace("—", "")
     text = ''.join((c for c in unicodedata.normalize('NFD', text) if unicodedata.category(c) != 'Mn'))
     text = re.sub(r"\d+", "", text) # remove numbers
     text = " ".join([word for word in text.split() if word.lower() not in stop_words])
