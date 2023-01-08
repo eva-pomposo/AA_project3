@@ -18,7 +18,6 @@ Release Date: April 10, 2006 [EBook #18143]
 Language: French
 
 
-*** START OF THIS PROJECT GUTENBERG EBOOK ROMÉO ET JULIETTE ***
 
 
 
@@ -29,6 +28,7 @@ file was produced from images generously made available
 by the Bibliothèque nationale de France (BnF/Gallica))
 
 
+*** START OF THIS PROJECT GUTENBERG EBOOK ROMÉO ET JULIETTE ***
 
 
 
@@ -5024,15 +5024,14 @@ FIN DU CINQUIÈME ET DERNIER ACTE.
 
 
 
+*** END OF THIS PROJECT GUTENBERG EBOOK ROMÉO ET JULIETTE ***
 
 
 
 
 End of Project Gutenberg's Roméo et Juliette, by William Shakespeare
 
-*** END OF THIS PROJECT GUTENBERG EBOOK ROMÉO ET JULIETTE ***
 
-***** This file should be named 18143-8.txt or 18143-8.zip *****
 This and all associated files of various formats will be found in:
         http://www.gutenberg.org/1/8/1/4/18143/
 
@@ -5064,7 +5063,6 @@ redistribution.
 
 
 
-*** START: FULL LICENSE ***
 
 THE FULL PROJECT GUTENBERG LICENSE
 PLEASE READ THIS BEFORE YOU DISTRIBUTE OR USE THIS WORK
@@ -5391,4 +5389,3 @@ including how to make donations to the Project Gutenberg Literary
 Archive Foundation, how to help produce our new eBooks, and how to
 subscribe to our email newsletter to hear about new eBooks.
 
-*** END: FULL LICENSE ***

@@ -18,7 +18,6 @@ Release Date: September 4, 2015 [EBook #49880]
 Language: Dutch
 
 
-*** START OF THIS PROJECT GUTENBERG EBOOK ROMEO EN JULIA ***
 
 
 
@@ -30,6 +29,7 @@ Gutenberg.
 
 
 
+*** START OF THIS PROJECT GUTENBERG EBOOK ROMEO EN JULIA ***
 
 
 
@@ -5030,12 +5030,11 @@ AANTEEKENING
 
 
 
+*** END OF THIS PROJECT GUTENBERG EBOOK ROMEO EN JULIA ***
 
 End of the Project Gutenberg EBook of Romeo en Julia, by William Shakespeare
 
-*** END OF THIS PROJECT GUTENBERG EBOOK ROMEO EN JULIA ***
 
-***** This file should be named 49880-8.txt or 49880-8.zip *****
 This and all associated files of various formats will be found in:
         http://www.gutenberg.org/4/9/8/8/49880/
 

@@ -15,7 +15,6 @@ Release Date: April 17, 2005 [EBook #15643]
 Language: Finnish
 
 
-*** START OF THIS PROJECT GUTENBERG EBOOK ROMEO JA JULIA ***
 
 
 
@@ -23,6 +22,7 @@ Language: Finnish
 Produced by Tapio Riikonen
 
 
+*** START OF THIS PROJECT GUTENBERG EBOOK ROMEO JA JULIA ***
 
 
 
@@ -5353,13 +5353,12 @@ surmankin.
 
 
 
+*** END OF THIS PROJECT GUTENBERG EBOOK ROMEO JA JULIA ***
 
 
 End of the Project Gutenberg EBook of Romeo ja Julia, by William Shakespeare
 
-*** END OF THIS PROJECT GUTENBERG EBOOK ROMEO JA JULIA ***
 
-***** This file should be named 15643-8.txt or 15643-8.zip *****
 This and all associated files of various formats will be found in:
         https://www.gutenberg.org/1/5/6/4/15643/
 
@@ -5387,7 +5386,6 @@ redistribution.
 
 
 
-*** START: FULL LICENSE ***
 
 THE FULL PROJECT GUTENBERG LICENSE
 PLEASE READ THIS BEFORE YOU DISTRIBUTE OR USE THIS WORK

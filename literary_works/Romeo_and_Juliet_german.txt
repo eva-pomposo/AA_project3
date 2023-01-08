@@ -16,13 +16,6 @@ how the file may be used.  You can also find out about how to make a
 donation to Project Gutenberg, and how to get involved.
 
 
-**Welcome To The World of Free Plain Vanilla Electronic Texts**
-
-**eBooks Readable By Both Humans and By Computers, Since 1971**
-
-*****These eBooks Were Prepared By Thousands of Volunteers!*****
-
-
 Title: Romeo und Julia
 
 Author: William Shakespeare
@@ -36,7 +29,6 @@ Language: German
 
 Character set encoding: ISO Latin-1
 
-*** START OF THE PROJECT GUTENBERG EBOOK, ROMEO UND JULIA ***
 
 
 
@@ -63,6 +55,7 @@ zur Verfügung gestellt.  Das Projekt ist unter der Internet-Adresse
 http://gutenberg2000.de erreichbar.
 
 
+*** START OF THE PROJECT GUTENBERG EBOOK, ROMEO UND JULIA ***
 
 
 Romeo und Julia
@@ -4808,6 +4801,7 @@ Wie diese: Julia und ihr Romeo.
 (Alle ab.)
 
 
+*** END OF THE PROJECT GUTENBERG EBOOK, ROMEO UND JULIA ***
 
 Ende dieses Projekt Gutenberg Etextes Romeo und Julia, von
 William Shakespeare (Übersetzt von August Wilhelm von Schlegel)
@@ -4816,7 +4810,6 @@ William Shakespeare (Übersetzt von August Wilhelm von Schlegel)
 
 
 
-*** END OF THE PROJECT GUTENBERG EBOOK, ROMEO UND JULIA ***
 
 This file should be named 6996-8.txt or 6996-8.zip
 
@@ -4960,7 +4953,6 @@ You can get up to date donation information online at:
 https://www.gutenberg.org/donation.html
 
 
-***
 
 If you can't reach Project Gutenberg,
 you can always email directly to:
@@ -4977,7 +4969,6 @@ We would prefer to send you information by email.
 
 (Three Pages)
 
-***START**THE SMALL PRINT!**FOR PUBLIC DOMAIN EBOOKS**START***
 Why is this "Small Print!" statement here? You know: lawyers.
 They tell us you might sue us if there is something wrong with
 your copy of this eBook, even if you got it for free from

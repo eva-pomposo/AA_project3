@@ -12,10 +12,11 @@ parser = argparse.ArgumentParser()
 parser.add_argument("--input", "-i", help="Path to the input text file", required=True)
 parser.add_argument("--output", "-o", help="Path to the output text file (preprocessed file)", required=True)
 parser.add_argument("--results", "-r", help="Name for the results files", required=True)
+parser.add_argument("--stopwords", "-s", help="Path to the stopwords file", required=True)
 args = parser.parse_args()
 
 # Preprocess the input text file
-text = file_processor(args.input, args.output)
+text = file_processor(args.input, args.output, args.stopwords)
 
 # Count the occurrences of each letter using the exact counters and calculate the memory usage
 process = psutil.Process() 
