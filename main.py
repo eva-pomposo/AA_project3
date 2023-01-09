@@ -15,7 +15,7 @@ parser.add_argument("--stopwords", "-s", help="Path to the stopwords file", requ
 args = parser.parse_args()
 
 # Preprocess the input text file
-#text = file_processor(args.input, args.output, args.stopwords)
+text = file_processor(args.input, args.output, args.stopwords)
 
 # Count the occurrences of each letter using the exact counters and calculate the memory usage
 exact_counts = exact_counters(args.output, args.results)
